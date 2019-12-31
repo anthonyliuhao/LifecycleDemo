@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController2: UIViewController {
     
+    var labelText: String?
+    
     @IBOutlet weak var label: UILabel!
      
     @IBAction func goBack(_ sender: UIButton) {
@@ -19,7 +21,8 @@ class ViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        label.text = "hello"
+//        label.text = "hello"
+        label.text = self.labelText
         
         print("VC2 viewDidLoad Called")
     }

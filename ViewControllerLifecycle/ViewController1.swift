@@ -35,7 +35,17 @@ class ViewController1: UIViewController {
         print("VC1 viewDidDisappear Called")
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc2 = segue.destination as! ViewController2
+        
+        // This will crash the app because the UILabel does not exist yet and is nil
+        // vc2.label.text = "Hello from VC1"
+        
+        // This works because properties of VC2 have been declared
+        vc2.labelText = "Hello from VC1"
+        
+        
+    }
     
 
 }
